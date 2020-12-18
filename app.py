@@ -73,7 +73,8 @@ def index():
         result += "<h3>[GET] /registrar --> enlace para registro de usuario</h3>"
         result += "<h3>[POST] /registrar --> se obtienen los datos del formulario y se guardan en una BD</h3>"
         result += "<h3>[POST] /ingresar --> se verifica nombre de usuario y clave para ingreso a validación de la empresa</h3>"
-        result += "<h3>[GET] /logout --> Terminar la sesion</h3>"
+        result += "<h3>[GET] /new_registro --> para validar otro empleado de la empresa</h3>"
+        result += "<h3>[GET] /logout --> terminar la sesion</h3>"
         
         return(result)
     except:
@@ -104,12 +105,8 @@ def registro_empresa():
     if request.method == 'GET':
         try:
             # Entrada a formulario de empresa por sesión.
-            if session['password'] in session:
-                return render_template('empresa.html')
-            else:
-                #Respuesta a través de un archico html en caso de no registrarse.
-                return render_template('error_ingreso.html')
-           
+            return render_template('empresa.html')
+        
         except:
             return jsonify({'trace': traceback.format_exc()})
 
@@ -248,14 +245,14 @@ def grafico_registrados():
     except:
         return jsonify({'trace': traceback.format_exc()})
 
-
 @app.route("/registrar", methods=['GET', 'POST'])
 def registrar_usuario():
     if request.method == 'GET':
         
         try:
+            
             #Retorna el archivo html para login de usuario
-            return render_template('login_prueba.html')
+            return render_template('login_prueba.html')                  
     
         except:
             return jsonify({'trace': traceback.format_exc()})
@@ -277,7 +274,7 @@ def registrar_usuario():
             #Registra la sesión
             session['name'] = nombre
             session['password'] = clave
-           
+            print(session)
             #Devuelve el html de login_prueba para ingresar el usuario y clave registrado.
             return render_template('login_prueba.html')
 
@@ -295,7 +292,7 @@ def ingresar():
 
             #Si la clave y nombre de usuario ingresados por formulario son iguales a los guardados
             # en la sesión retorna el formulario a completar por la empresa. 
-            if 'password' in session or session['password'] == clave_login and session['name'] == nombre_login:
+            if session['password'] == clave_login and session['name'] == nombre_login and 'name' in session and 'password' in session:
                 return render_template('empresa.html', nombre_login=nombre_login)
             else:
                 #Informa en caso no esté registrado.
@@ -304,12 +301,25 @@ def ingresar():
         except:
             return jsonify({'trace': traceback.format_exc()})
 
+
+@app.route("/new_registro", methods=['GET'])
+def new_registro():
+
+    #Función para validar por parte de la empresa otro empleado.
+    if request.method == 'GET':
+        
+        try:  
+            return render_template('empresa.html')
+            
+        except:
+            return jsonify({'trace': traceback.format_exc()})
+
 @app.route("/logout")
 def logout():
     try:
         # Borrar y cerrar la sesion
         session.clear()
-        return redirect(url_for('/ingresar'))
+        return render_template('salida.html')
     except:
         return jsonify({'trace': traceback.format_exc()})
 
