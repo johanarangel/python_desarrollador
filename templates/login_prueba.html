@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "ie = edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <link rel="shortcut icon" href="{{url_for('static', filename='media/logo_permiso.ico')}}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/empresa.css') }}">
+    <link rel="stylesheet" href="../static/style/menu.css" type="text/css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/fonts/style.css') }}">
+    <link rel="stylesheet" href="../static/style/fonts/style.css" type="text/css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/login_prueba.css') }}">
+    <link rel="stylesheet" href="../static/style/login_prueba.css" type="text/css">
+    <title>login</title>
+    <center><h1>Registro de usuario<span class="icon-add-user" style="font-size: 150%; color: blue;"></span></h1>
+    <h4><span class="icon-info" style="font-size: 150%; color:white;"></span>Ingrese con su usuario y contraseña, si no cuenta con uno debe crearlo</h4>
+    <h4>El password admite solo números.</h4>
+    <a href="menu.html" class= "button medium radius"><span class="icon-home"></span>Inicio</a>
+    <a href="salida.html" class= "button medium radius brown"><span class="icon-arrow-right"></span>Salir del sistema</a>
+   </center>
+</head>
+<body>        
+        <div class = "container">
+            
+                <center>
+                  
+                  <div class="login-page">
+                    <div class="form">
+                      <form class="register-form" action="registrar" method="POST">
+                        <input type="text" name="name" required placeholder="name"/>
+                        <input type="password" name="password" required placeholder="password"/>
+                        <input type="text" name="email" required placeholder="email"/>
+                        <button>Crear</button>
+                        <p class="message">Estás registrado? <a href="#">Registrarse</a></p>
+                      </form>
+                      <form class="login-form" action="ingresar" method="POST">
+                        <input type="text" name="name_login" required placeholder="name"/>
+                        <input type="password" name="password_login" required placeholder="password"/>
+                        <button>login</button>
+                        <p class="message">No está registrado? <a href="#">Crea una cuenta</a></p>
+                      </form>
+
+                    </div>                  
+                  </div>
+             
+                </center>          
+            
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/lib/OpenLayers.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename="js/login_prueba.js")}}"></script>
+</body>
+</html>
+
+
+
+

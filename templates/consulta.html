@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name = " viewport " content = " widht = device - widht, initial- scale = 1.0 ">
+    
+    <link rel="shortcut icon" href="{{url_for('static', filename='media/logo_permiso.ico')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/menu.css') }}">
+    <link rel="stylesheet" href="../static/style/menu.css" type="text/css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/fonts/style.css') }}">
+    <link rel="stylesheet" href="../static/style/fonts/style.css" type="text/css">
+
+    <title>Validación</title>
+</head>
+<body>
+
+    <h1><span class="icon-check" style="font-size: 150%; color: blue;"></span>Reporte</h1>
+
+    <div class = "container">
+        <div class = "form_top">
+            <h2>Resultado de la consulta<span class="icon-clipboard" style="font-size: 150%; color: black;"></span></h2>
+     
+        </div>
+
+        <center><div class="container my-5 text-center">
+            <div class="mt-5"></center>
+            
+                <center>
+                    <table border="1" cellpadding="0" cellspacing="1" bordercolor="cyan" style="border-collapse:collapse;border-color:rgb(12, 12, 12);">
+  
+                        <thead cellpadding="1.0" cellspacing="1.0">
+                                <tr>
+                                    <th scope="col">Código</th>
+                                    <th scope="col">Empresa</th>
+                                    <th scope="col">Actividad</th>
+                                    <th scope="col">Apellido y Nombre</th>
+                                    <th scope="col">Edad</th>
+                                    <th scope="col">DNI</th>
+                                    <th scope="col">Fecha de Permiso</th>
+                                    <th scope="col">Riesgo</th>
+                                </tr>
+                            </thead>
+            
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{datos[0][0]}}</th>
+                                    <td>{{datos[0][1]}}</td>
+                                    <td>{{datos[0][2]}}</td>
+                                    <td>{{datos[0][3]}}</td>
+                                    <td>{{datos[0][4]}}</td>
+                                    <td>{{datos[0][5]}}</td>
+                                    <td>{{datos[0][6]}}</td>
+                                    <td>{{datos[0][7]}}</td>
+                                    <td>{{datos[0][8]}}</td>                
+                                </tr>                                   
+                            </tbody>
+        
+                        </thead>
+    
+            </table>
+
+        <center>
+
+            <a href="menu.html" class= "button medium radius"><span class="icon-home"></span>Inicio</a> 
+            <a href="validar_datos.html" class= "button medium radius"><span class="icon-check"></span>Otro dato a validar</a>
+            <a href="salida.html" class= "button medium radius brown"><span class="icon-arrow-right"></span>Salir del sistema</a>
+        </center>
+
+        <center>
+            <footer class="pie">
+                
+            <h3><strong><span class="icon-address" style="font-size: 200%; color:  hsl(123, 99%, 44%);"></span>Dirección: Puerto Madryn. 
+                <span class="icon-documents" style="font-size: 200%; color:  hsl(330, 17%, 98%);"></span>CP9120 - Chubut - Argentina  
+                <span class="icon-email" style="font-size: 200%; color:  hsl(184, 99%, 44%);"></span>E-mail: johanarang@hotmail.com</strong></h3>
+        
+            </footer>
+        </center>
+
+</body>
+
+</html>

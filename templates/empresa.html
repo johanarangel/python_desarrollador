@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "ie = edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <link rel="shortcut icon" href="{{url_for('static', filename='media/logo_permiso.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/empresa.css') }}">
+    <link rel="stylesheet" href="../static/style/menu.css" type="text/css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/fonts/style.css') }}">
+    <link rel="stylesheet" href="../static/style/fonts/style.css" type="text/css">
+
+    <title>Validación</title>
+    <h1>Validación de la empresa<span class="icon-add-user" style="font-size: 150%; color: blue;"></span></h1>
+</head>
+<body>
+    <center><h4>Bienvenido {{nombre_login}}</h4></center>
+    <h2><span class="icon-info" style="font-size: 150%; color: black;"></span>Complete el formulario con la información solicitada.</h2>
+        
+        <div class = "container">
+            
+            <h2>Registro<span class="icon-text-document" style="font-size: 200%; color: black;"></span></h2>      
+            <form method = "POST" action = "{{url_for ('procesar')}}">
+                
+                <center>
+                    <div id="codigo_div">
+                        </span><label for="codigo"><span class="icon-code" style="font-size: 200%; color: black;"></span><strong>Código de circulación:</strong></label>
+                        <input name="codigo" required type="number" placeholder="Ej:0000000">
+                    </div>
+                    <br><br>
+               
+                    <div id="empresa_div">
+                        </span><label for="empresa"><span class="icon-briefcase" style="font-size: 200%; color: black;"></span><strong>Nombre de la empresa:</strong></label>
+                        <input name="empresa" required type="text" placeholder="Ej: coto">
+                    </div>
+                    <br><br>
+                
+                    <div id="actividad_div">
+                        </span><label for="actividad"><span class="icon-clipboard" style="font-size: 200%; color: black;"></span><strong>Actividad:</strong></label>
+                        <input name="actividad" required type="text" placeholder="Ej:vendedor">
+                    </div>
+                    <br><br>
+                
+                    <div id="nombre_div">
+                    </span><label for="nombre"><span class="icon-edit" style="font-size: 200%; color: black;"></span><strong>Apellido y Nombre:</strong></label>
+                    <input name="nombre"  required type="text" placeholder="Ej:vega carmen">
+                    </div>
+                    <br><br>
+                    
+                    <div id="edad_div">
+                    </span><label for="edad"><span class="icon-edit" style="font-size: 200%; color: black;"></span><strong>Edad:</strong></label>
+                    <input name="edad" required type="number" placeholder="Ej:20">
+                    </div>
+                    <br><br>
+                        
+                    <div id="dni_div">
+                        </span><label for="dni"><span class="icon-edit" style="font-size: 200%; color: black;"></span><strong>DNI:</strong></label>
+                        <input name="dni" required type="number" placeholder="Ej:00000000">
+                    </div>
+                    <br><br>
+
+                    <div id="riesgo_div">
+                        <span class="icon-user" style="font-size: 200%; color: black;"></span><strong>Persona de riesgo:</strong>
+                        <select name="riesgo">
+                        <option>Selecciona opción</option>
+                        <option>Mayor a 60 años</option>                  
+                        <option>Embarazada</option>
+                        <option>Problemas Pulmonares</option>
+                        <option>Enfermedad Cardíaca</option>
+                        <option>Diábetes</option>
+                        <option>Obesidad</option>
+                        <option>Cancér</option>
+                        <option>Sistema Inmunitario Debilitado</option><
+                        <option>Enfermedad Renal</option>
+                        <option>Sin riesgos</option></select>
+
+                    </div>
+                    <br><br>               
+                
+                    <input class= "button blue medium radius" type="submit" value="Registrar">
+                    <a href="menu.html" class= "button medium radius"><span class="icon-home"></span>Inicio</a>
+                    <a href="salida.html" class= "button medium radius brown"><span class="icon-arrow-right"></span>Salir del sistema</a>
+                    
+                </center>
+
+            </form>
+            
+                <center>
+                <footer class="pie">
+                           
+                    <h3><strong><span class="icon-address" style="font-size: 200%; color:  hsl(123, 99%, 44%);"></span>Dirección: Puerto Madryn. 
+                        <span class="icon-documents" style="font-size: 200%; color:  hsl(330, 17%, 98%);"></span>CP9120 - Chubut - Argentina  
+                        <span class="icon-email" style="font-size: 200%; color:  hsl(184, 99%, 44%);"></span>E-mail: johanarang@hotmail.com</strong></h3>
+                
+                </footer>
+            </center>            
+</body>
+</html>

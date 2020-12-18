@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "ie = edge">
+    <meta name = " viewport " content = " widht = device - widht, initial- scale = 1.0 ">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/menu.css') }}">
+    <link rel="stylesheet" href="../static/style/menu.css" type="text/css">
+
+    <link rel="shortcut icon" href="{{url_for('static', filename='media/logo_permiso.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/fonts/style.css') }}">
+    <link rel="stylesheet" href="../static/style/fonts/style.css" type="text/css">
+
+    <title>Validación</title>
+</head>
+<body>
+
+    <h1><span class="icon-check" style="font-size: 150%; color: blue;"></span>Datos a validar</h1>
+
+        <div class = "container">
+        
+            <h2>Consulta<span class="icon-clipboard" style="font-size: 150%; color: black;"></span></h2>
+            <h2><span class="icon-info" style="font-size: 150%; color: black;"></span>Ingrese el código de circulación que reposa en el permiso para verificar la información.</h2>      
+        
+        </div>
+       
+        
+            <form method = "POST" action = "{{url_for ('consulta')}}">
+                <center>
+
+                    <div id="codigo_div">
+                        </span><label for="codigo"><span class="icon-code" style="font-size: 200%; color: black;"></span><strong>Código de circulación:</strong></label>
+                        <input name="codigo" required type="number" placeholder="codigo">
+                    </div>
+                    <br><br>
+
+                    <input class= "button blue medium radius" type="submit" value="Buscar">
+                
+                </center>
+            </form>
+
+        <center>
+
+            <a href="menu.html" class= "button medium radius"><span class="icon-home"></span>Inicio</a> 
+            <a href="salida.html" class= "button medium radius brown"><span class="icon-arrow-right"></span>Salir del sistema</a>
+        </center>
+
+        <center>
+            <footer class="pie">
+                
+            <h3><strong><span class="icon-address" style="font-size: 200%; color:  hsl(123, 99%, 44%);"></span>Dirección: Puerto Madryn. 
+                <span class="icon-documents" style="font-size: 200%; color:  hsl(330, 17%, 98%);"></span>CP9120 - Chubut - Argentina  
+                <span class="icon-email" style="font-size: 200%; color:  hsl(184, 99%, 44%);"></span>E-mail: johanarang@hotmail.com</strong></h3>
+        
+            </footer>
+        </center>
+
+</body>
+
+</html> 

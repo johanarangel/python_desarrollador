@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    
+    background-image: url('../media/carretera.jpg'); 
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+h1{
+
+    text-align: center;
+    color:black;
+    font-size: 3em;
+    text-transform: uppercase;
+    font: 'averta';
+    position: center;
+    margin: 20px;
+    left: 5%;
+    top: 5%;
+    transform: translateX(-5%)  translateY(-5%);
+}
+
+h2{
+
+    text-align: center;
+    color:black;
+    font-size: 1em;
+    text-transform: uppercase;
+    font: 'averta';
+    position: relative;
+    margin: 30px;
+    left: 40%;
+    top: 40%;
+    transform: translateX(-40%)  translateY(-40%);
+}
+
+h3{
+
+    text-align: center;
+    color: black;
+    font-size: 1em;
+    text-transform: uppercase;
+    font: 'averta';
+    position: relative;
+    margin: 100px;
+    left: 40%;
+    top: 40%;
+    transform: translateX(-40%)  translateY(-40%);
+}
+
+/*Caracteristicas generales de los botones*/
+.button{
+
+    background: #7f8c7f8d;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.25em;
+    margin: 50px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px #373c3c;
+}
+
+/*Para separar el icono de la palabra*/
+.button span{
+
+    margin-right: 10px;
+}
+
+/*Para agregar color y sobra*/
+.button.blue{
+
+    background: #8b6ecf8d;
+    box-shadow: 0px 3px 0px  #0a031d8d;
+}
+
+.button.medium{
+
+    width: 250px; /*Más ancho a los botones*/
+}
+
+/*Efectos*/
+.button.radius{
+
+    border-radius: 50px; /*Da borde curvo a los botones*/
+}
+
+
+.button:hover{
+
+    box-shadow: 0px 0px 0px;   /*Para que desaparezcan las sombras*/
+    padding-top: 7px; /*Este efecto agranda y va al final de construir los botones y es menor al padding del button */
+
+}
