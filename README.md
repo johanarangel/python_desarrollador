@@ -10,7 +10,7 @@ Segundo proyecto integrador.
 Verificación de permisos de circulación provincial.
 
 # Descripción. 
-Es un programa que permite la verificación de perimisos de circulación para el ingreso a provincia. 
+Es una web app que permite la verificación de permisos de circulación para el ingreso a provincia. 
 Está realizado con el lenguaje de programación Python. Funciona con un menu que tiene tres acciones a realizar:
 
 Acción 1: validación de la empresa, donde se debe crear un usuario para poder completar el formulario  de datos del empleado, empresa, la actividad, también los datos del empleado; nombre, apellido, fecha de permiso, edad, DNI y código de circulación obtenido (información almacenada en una base de datos)
