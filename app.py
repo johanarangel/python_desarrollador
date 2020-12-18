@@ -295,7 +295,7 @@ def ingresar():
 
             #Si la clave y nombre de usuario ingresados por formulario son iguales a los guardados
             # en la sesión retorna el formulario a completar por la empresa. 
-            if session['password'] == clave_login and session['name'] == nombre_login:
+            if 'password' in session or session['password'] == clave_login and session['name'] == nombre_login:
                 return render_template('empresa.html', nombre_login=nombre_login)
             else:
                 #Informa en caso no esté registrado.
